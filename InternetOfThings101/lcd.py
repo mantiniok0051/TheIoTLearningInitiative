@@ -1,5 +1,5 @@
-
 import pyupm_i2clcd as lcd
+
 
 # Initialize Jhd1313m1 at 0x3E (LCD_ADDRESS) and 0x62 (RGB_ADDRESS) 
 myLcd = lcd.Jhd1313m1(0, 0x3E, 0x62)

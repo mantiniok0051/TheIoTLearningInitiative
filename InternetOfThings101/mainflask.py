@@ -1,16 +1,21 @@
+'''
+Created on 23/04/2016
+@author: MARIANO
+'''
 #!/usr/bin/python
+
 from flask import Flask
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
 api = Api(app)
 
-class Network(Resource):
+class DataSensorRestApi(Resource):
     def get(self):
-        data = 'Network Data'
+        data = 'This is data from a sensor'
         return data
 
-api.add_resource(Network, '/network')
+api.add_resource(DataSensorRestApi, '/datasensor')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',debug=True)
+    app.run(host='0.0.0.0', debug=True)
